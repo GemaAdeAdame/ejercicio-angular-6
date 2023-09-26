@@ -1,0 +1,9 @@
+<div>
+  <h2>Técnicas que Hohan ha aprendido:</h2>
+  <ul>
+    <li *ngFor="let technique of learnedTechniques">
+      {{ technique.name }} - Daño: {{ technique.damage }}, Dificultad: {{ technique.complexity }}
+      <button (click)="learnTechniqueFromGoku(technique)" style="background-color: blue; color: white;">Notificar a Goku</button>
+    </li>
+  </ul>
+</div>

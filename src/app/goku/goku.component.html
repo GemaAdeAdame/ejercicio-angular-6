@@ -1,0 +1,10 @@
+<!-- goku.component.html -->
+<div>
+  <h2>Técnicas que Goku puede enseñar:</h2>
+  <ul>
+    <li *ngFor="let technique of techniques">
+      {{ technique.name }} - Daño: {{ technique.damage }}, Dificultad: {{ technique.complexity }}
+      <button (click)="transferTechniqueTohohan(technique)">Enseñar a hohan</button>
+    </li>
+  </ul>
+</div>
