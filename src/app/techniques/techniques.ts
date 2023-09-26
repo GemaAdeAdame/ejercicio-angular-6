@@ -1,4 +1,4 @@
-// techniques.ts
+// src/app/techniques.ts
 
 export interface Technique {
   name: string;
@@ -7,9 +7,9 @@ export interface Technique {
   // Otros campos si es necesario
 }
 
-// Define tus técnicas
+// Define tus técnicas aquí
 export const techniques: Technique[] = [
-  { name: 'Técnica 1', damage: 100, complexity: 'Alta' },
-  { name: 'Técnica 2', damage: 150, complexity: 'Media' },
-  // Otras técnicas
+  { name: 'Kamehameha', damage: 1000, complexity: 'Alta' },
+  { name: 'Genkidama', damage: 2000, complexity: 'Media' },
+  // Agrega más técnicas
 ];

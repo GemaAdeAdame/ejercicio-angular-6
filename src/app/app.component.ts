@@ -4,7 +4,7 @@ import { Technique } from '../app/techniques/techniques';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: 'app.component.html',
 })
 export class AppComponent {
   // Técnicas que hohan ha aprendido
