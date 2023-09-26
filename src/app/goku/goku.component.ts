@@ -1,15 +1,22 @@
 // src/app/goku/goku.component.ts
 
-import { Component } from '@angular/core';
-import { techniques } from '../techniques/techniques'; // Asegúrate de importar las técnicas.
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Technique } from '../techniques/techniques'; // Asegúrate de importar las técnicas.
 
 @Component({
   selector: 'app-goku',
   templateUrl: './goku.component.html',
   styleUrls: ['./goku.component.scss']
 })
+
 export class GokuComponent {
-  techniques = techniques; // Asigna las técnicas al arreglo techniques en el componente.
+  @Input() techniques: Technique[] = [];
+  @Output() gohanLearnedTechnique = new EventEmitter<Technique>();
+
+  transferTechniqueToGohan(technique: Technique) {
+    // Emitir un evento con la técnica que Goku transfiere a Gohan.
+    this.gohanLearnedTechnique.emit(technique);
+  }
 
   constructor() { }
 }

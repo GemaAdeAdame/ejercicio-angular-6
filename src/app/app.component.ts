@@ -1,6 +1,6 @@
 // app.component.ts
 import { Component } from '@angular/core';
-import { Technique } from '../app/techniques/techniques';
+import { Technique, techniques } from './techniques/techniques'; // Importa las técnicas correctamente desde el archivo adecuado.
 
 @Component({
   selector: 'app-root',
@@ -11,9 +11,7 @@ export class AppComponent {
   hohanLearnedTechniques: Technique[] = [];
 
   // Técnicas que Goku puede enseñar
-  techniques: Technique[] = [
-    // Aquí configura tus técnicas
-  ];
+  techniques: Technique[] = techniques; // Asigna las técnicas correctamente.
 
   // Método para notificar a Goku sobre una técnica aprendida por hohan
   notifyGoku(technique: Technique) {

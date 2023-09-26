@@ -7,3 +7,14 @@
     </li>
   </ul>
 </div>
+<!-- gohan.component.html -->
+
+<div>
+  <h2>Técnicas que Gohan ha aprendido:</h2>
+  <ul>
+    <li *ngFor="let technique of learnedTechniques">
+      {{ technique.name }} - Daño: {{ technique.damage }}, Dificultad: {{ technique.complexity }}
+      <button (click)="learnTechniqueFromGoku(technique)">Notificar a Goku</button>
+    </li>
+  </ul>
+</div>
